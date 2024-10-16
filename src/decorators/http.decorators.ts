@@ -25,13 +25,7 @@ export function Auth(
 
   return applyDecorators(
     Roles(roles),
-    // FIXME: check SessionGuard in UseGuards
-    UseGuards(
-      SessionGuard,
-      AuthGuard({ public: isPublicRoute }),
-      RolesGuard,
-      SessionGuard,
-    ),
+    UseGuards(SessionGuard, AuthGuard({ public: isPublicRoute }), RolesGuard),
     ApiBearerAuth(),
     UseInterceptors(AuthUserInterceptor),
     ApiUnauthorizedResponse({ description: 'Unauthorized' }),

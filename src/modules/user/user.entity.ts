@@ -3,7 +3,7 @@ import { Column, Entity, OneToMany, Unique, VirtualColumn } from 'typeorm';
 import { AbstractEntity } from '../../common/abstract.entity';
 import { RoleType, UserStatusEnum } from '../../constants';
 import { UseDto } from '../../decorators';
-import { PostEntity } from '../post/post.entity';
+import { CommunicationEntity } from '../communication/communication.entity';
 import { UserDto } from './dtos/user.dto';
 
 @Entity({ name: 'users' })
@@ -42,6 +42,15 @@ export class UserEntity extends AbstractEntity<UserDto> {
   })
   status!: UserStatusEnum;
 
-  @OneToMany(() => PostEntity, (postEntity) => postEntity.user)
-  posts?: PostEntity[];
+  @OneToMany(
+    () => CommunicationEntity,
+    (communication) => communication.follower,
+  )
+  followers?: CommunicationEntity[];
+
+  @OneToMany(
+    () => CommunicationEntity,
+    (communication) => communication.following,
+  )
+  followings?: CommunicationEntity[];
 }

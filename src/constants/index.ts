@@ -1,3 +1,4 @@
+export * from './communication-status.enum';
 export * from './message.type';
 export * from './order.enum';
 export * from './role-type';

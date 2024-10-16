@@ -5,7 +5,6 @@ import {
   HttpCode,
   HttpStatus,
   Post,
-  Version,
 } from '@nestjs/common';
 import {
   ApiAcceptedResponse,
@@ -71,12 +70,11 @@ export class AuthController {
     return this.authService.logout(user.id);
   }
 
-  @Version('1')
   @Get('me')
   @HttpCode(HttpStatus.OK)
   @Auth([RoleType.USER])
   @ApiOkResponse({ type: UserDto, description: 'current user info' })
-  getCurrentUser(@AuthUser() user: UserEntity): UserDto {
-    return user.toDto();
+  getCurrentUser(@AuthUser() user: UserDto): UserDto {
+    return user;
   }
 }

@@ -1,13 +1,13 @@
-# Simple Blog App
+# Simple friendships App
 
-> This is an ever-evolving, very opinionated architecture and dev environment for new node projects using [NestJS](https://nestjs.com). Questions, feedback, and for now, even bikeshedding are welcome. 😄
+
 
 ## Getting started
 
 ```bash
 
 # 1. Enter your newly-cloned folder.
-cd Blog
+cd backend-api-friendships 
 
 # 2. Create Environment variables file.
 cp .env.example .env

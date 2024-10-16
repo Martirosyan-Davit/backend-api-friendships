@@ -15,7 +15,6 @@ import { ApiPageOkResponse, Auth, AuthUser, UUIDParam } from '../../decorators';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserDto } from './dtos/user.dto';
 import { UsersPageOptionsDto } from './dtos/users-page-options.dto';
-import { UserEntity } from './user.entity';
 import { UserService } from './user.service';
 
 @Controller('users')
@@ -56,7 +55,7 @@ export class UserController {
   })
   async update(
     @Body() updateUserDto: UpdateUserDto,
-    @AuthUser() user: UserEntity,
+    @AuthUser() user: UserDto,
   ): Promise<void> {
     return this.userService.update(user.id, updateUserDto);
   }
