@@ -66,9 +66,6 @@ export class ApiConfigService {
     return this.getString('NODE_ENV');
   }
 
-  get fallbackLanguage(): string {
-    return this.getString('FALLBACK_LANGUAGE');
-  }
 
   get throttlerConfigs(): ThrottlerOptions {
     return {
