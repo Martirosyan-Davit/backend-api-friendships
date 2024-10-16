@@ -1,6 +1,6 @@
 # Simple friendships App
 
-
+In this simple application you can see a simple follower-following scheme you can sign in, send, accept or decline friend requests
 
 ## Getting started
 
@@ -15,16 +15,6 @@ cp .env.example .env
 # 3. Install dependencies. (Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install)
 yarn
 ```
-
-## Checklist
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Change configurations in `.env`
-- [ ] Remove the `.github` folder which contains the funding info
-
-And, enjoy :)
-
 
 ### Development
 ```bash
@@ -50,9 +40,6 @@ And you will see the generated file in `dist` that ready to be served.
   <!-- <dt><b>Quick scaffolding</b></dt>
   <dd>Create modules, services, controller - right from the CLI!</dd> -->
 
-  <dt><b>Instant feedback</b></dt>
-  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes are reflected instantaneously.</dd>
-
   <dt><b>JWT Authentication</b></dt>
   <dd>Installed and configured JWT authentication.</dd>
 
@@ -73,7 +60,7 @@ And you will see the generated file in `dist` that ready to be served.
 </dl>
 
 ### Redis Installation
-To utilize this code, make sure to install Redis using the following link: 
+Redis is used to store sessions in the code. If you already have Redis installed, please do not forget to configure it. If Redis is not installed, you can install it using the following links:
 
 For Linux:   [https://redis.io/docs/install/install-stack/linux/]
 For macOS:   [https://redis.io/docs/install/install-stack/mac-os/]
