@@ -66,7 +66,6 @@ export class ApiConfigService {
     return this.getString('NODE_ENV');
   }
 
-
   get throttlerConfigs(): ThrottlerOptions {
     return {
       ttl: this.getDuration('THROTTLER_TTL', 'second'),
